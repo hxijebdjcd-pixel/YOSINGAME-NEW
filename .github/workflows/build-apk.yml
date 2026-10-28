@@ -1,6 +1,6 @@
 name: Build YOSINGAME APK
 
-on:
+'on':
 workflow_dispatch:
 push:
 branches:
@@ -28,11 +28,7 @@ steps:
   - name: Install system dependencies
     run: |
       sudo apt-get update
-      sudo apt-get install -y \
-        git zip unzip autoconf libtool pkg-config \
-        zlib1g-dev libncurses5-dev libncursesw5-dev \
-        libtinfo6 cmake libffi-dev libssl-dev \
-        build-essential ccache
+      sudo apt-get install -y git zip unzip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo6 cmake libffi-dev libssl-dev build-essential ccache
 
   - name: Install Buildozer
     run: |
